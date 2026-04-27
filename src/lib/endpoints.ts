@@ -35,7 +35,7 @@ export const getPublicProfile = (id: number): Promise<PublicProfile> =>
   api.get(`/api/accounts/users/${id}/`).then((r) => r.data);
 
 export const getFriends = (): Promise<PublicProfile[]> =>
-  api.get("/api/accounts/friends/").then((r) => r.data);
+  api.get("/api/accounts/friends/").then((r) => r.data.results);
 
 export const getFriendRequests = (): Promise<FriendRequest[]> =>
   api.get("/api/accounts/friend-requests/").then((r) => r.data);
