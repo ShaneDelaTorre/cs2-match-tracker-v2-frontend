@@ -70,4 +70,4 @@ export const getMatchStateAtRound = (
 
 // Maps Endpoints
 export const getMaps = (): Promise<MapType[]> =>
-  api.get("/api/matches/maps/").then((r) => r.data);
+  api.get("/api/matches/maps/").then((r) => r.data.results);
