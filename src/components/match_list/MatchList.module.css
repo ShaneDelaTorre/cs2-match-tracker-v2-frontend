@@ -1,0 +1,76 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.empty {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.item:hover {
+  border-color: #333;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.result {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.win { background: #1a3a1a; color: #4caf50; }
+.loss { background: #3a1a1a; color: #e05555; }
+.draw { background: #2a2a1a; color: #f0c040; }
+
+.map {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.mode {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.1rem;
+}
+
+.right {
+  text-align: right;
+}
+
+.score {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.kd {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.1rem;
+}
