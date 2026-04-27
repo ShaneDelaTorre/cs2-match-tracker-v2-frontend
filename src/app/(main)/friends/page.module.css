@@ -1,0 +1,136 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 720px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.requestItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+}
+
+.username {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.username:hover {
+  color: #f0c040;
+}
+
+.requestActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.acceptButton {
+  padding: 0.35rem 0.9rem;
+  background: #1a3a1a;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.acceptButton:disabled {
+  opacity: 0.5;
+}
+
+.rejectButton {
+  padding: 0.35rem 0.9rem;
+  background: transparent;
+  color: #888;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.rejectButton:hover {
+  color: #e05555;
+  border-color: #e05555;
+}
+
+.friendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.friendItem:hover {
+  border-color: #333;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #333;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.friendName {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.friendRank {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.1rem;
+}
