@@ -1,0 +1,179 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.resultBadge {
+  padding: 0.3rem 0.9rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.win { background: #1a3a1a; color: #4caf50; }
+.loss { background: #3a1a1a; color: #e05555; }
+.draw { background: #2a2a1a; color: #f0c040; }
+
+.score {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+.stateGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+.stat {
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.statValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slider {
+  flex: 1;
+  accent-color: #f0c040;
+  cursor: pointer;
+}
+
+.sliderLabel {
+  font-size: 0.85rem;
+  color: #f0c040;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.rounds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.round {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border-left: 3px solid transparent;
+  background: #111;
+  font-size: 0.85rem;
+}
+
+.roundWin { border-left-color: #4caf50; }
+.roundLoss { border-left-color: #e05555; }
+
+.roundNum {
+  font-weight: 600;
+  color: #888;
+  min-width: 28px;
+}
+
+.roundResult {
+  font-weight: 600;
+  color: #f0f0f0;
+  min-width: 36px;
+}
+
+.roundStat {
+  color: #aaa;
+  min-width: 32px;
+}
+
+.roundBadge {
+  padding: 0.15rem 0.5rem;
+  background: #1e1e1e;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.mvp {
+  background: #2a2510;
+  color: #f0c040;
+}
