@@ -1,24 +1,20 @@
-"use client";
-
 import "./globals.css";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { AuthProvider } from "@/context/AuthContext";
-import { queryClient } from "@/lib/queryClient";
+import { cookies } from "next/headers";
+import Providers from "./providers";
 
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const token = cookieStore.get("access_token");
+  const isAuthenticated = !!token;
+
   return (
     <html lang="en">
       <body>
-        <QueryClientProvider client={queryClient}>
-          <AuthProvider>{children}</AuthProvider>
-          <ReactQueryDevtools initialIsOpen={false} />
-        </QueryClientProvider>
+        <Providers initialAuth = {isAuthenticated}>{children}</Providers>
       </body>
     </html>
   );
