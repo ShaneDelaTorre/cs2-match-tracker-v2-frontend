@@ -6,7 +6,7 @@ export default function NotFound() {
       <h2 className={styles.code}>404</h2>
       <p className={styles.title}>Page not found</p>
       <p className={styles.message}>
-        The page you're looking for doesn't exist.
+        The page you&apos;re looking for doesn&apos;t exist.
       </p>
       <a href="/dashboard" className={styles.link}>
         Go to Dashboard
