@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { useOwnProfile } from "@/hooks/useProfile";
 import styles from "./Navbar.module.css";
@@ -10,11 +10,9 @@ export default function Navbar() {
   const { isAuthenticated, logout } = useAuth();
   const { data: profile } = useOwnProfile();
   const pathname = usePathname();
-  const router = useRouter();
 
-  const handleLogout = () => {
-    logout();
-    router.push("/login");
+  const handleLogout = async ()  => {
+    await logout();
   };
 
   const isActive = (path: string) => pathname.startsWith(path);
