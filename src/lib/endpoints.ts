@@ -24,6 +24,8 @@ export const registerUser = (data: {
 }): Promise<void> =>
   api.post("/auth/users/", data).then((r) => r.data);
 
+export const logout = (): Promise<void> => api.post("/auth/logout/").then((r) => r.data);
+
 // Accounts Endpoints 
 export const getOwnProfile = (): Promise<OwnProfile> =>
   api.get("/api/accounts/me/").then((r) => r.data);
