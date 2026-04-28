@@ -50,7 +50,7 @@ export default function LoginPage() {
             type="text"
             autoComplete="username"
             placeholder="leon_kennedy"
-            defaultValue={state.fields?.username}
+            defaultValue={state.fields?.username ?? ""}
             required
           />
         </div>
@@ -62,7 +62,7 @@ export default function LoginPage() {
             name="password"
             type="password"
             autoComplete="current-password"
-            defaultValue={state.fields?.password}
+            defaultValue={state.fields?.password ?? ""}
             required
           />
         </div>
