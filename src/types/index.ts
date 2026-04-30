@@ -92,6 +92,23 @@ export interface FriendRequest {
   created_at: string;
 }
 
+export interface ChatHistory {
+  id: number;
+  sender: PublicUser;
+  receiver: PublicUser;
+  body: string;
+  is_read: boolean;
+  sent_at: string;
+}
+
+export interface ChatMessage {
+  type: string;
+  message_id: number;
+  sender_id: number;
+  body: string;
+  sent_at: string
+}
+
 export interface PaginatedResponse<T> {
   count: number;
   next: string | null;

@@ -5,6 +5,7 @@ import {
   Match,
   MapType,
   FriendRequest,
+  ChatHistory,
   TokenPair,
   PaginatedResponse,
 } from "@/types";
@@ -73,3 +74,7 @@ export const getMatchStateAtRound = (
 // Maps Endpoints
 export const getMaps = (): Promise<MapType[]> =>
   api.get("/api/matches/maps/").then((r) => r.data.results);
+
+// Chats Endpoints
+export const getChatHistory = (recepientId: number): Promise<ChatHistory[]> =>
+  api.get(`api/chat/${recepientId}`).then((r) => r.data);
