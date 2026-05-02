@@ -2,6 +2,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   getFriends,
   getFriendRequests,
+  searchAccounts,
   sendFriendRequest,
   respondToFriendRequest,
 } from "@/lib/endpoints";
@@ -16,6 +17,13 @@ export const useFriendRequests = () =>
   useQuery({
     queryKey: ["friend-requests"],
     queryFn: getFriendRequests,
+  });
+
+export const useAccountSearch = (query: string) =>
+  useQuery({
+    queryKey: ["user-search", query],
+    queryFn: () => searchAccounts(query),
+    enabled: query.length > 0,
   });
 
 export const useSendFriendRequest = () => {
