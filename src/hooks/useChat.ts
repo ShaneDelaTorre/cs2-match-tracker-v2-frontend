@@ -5,4 +5,5 @@ export const useChat = (recepientId: number) =>
     useQuery({
         queryKey: ["chat-history", recepientId],
         queryFn: () => getChatHistory(recepientId),
+        staleTime: 0,
     });
