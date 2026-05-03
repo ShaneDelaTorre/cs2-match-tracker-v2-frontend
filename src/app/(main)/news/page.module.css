@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 720px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.card:hover {
+  border-color: #f0c040;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.source {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f0c040;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.date {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.readMore {
+  font-size: 0.8rem;
+  color: #666;
+  transition: color 0.15s;
+}
+
+.card:hover .readMore {
+  color: #f0c040;
+}
+
+.loading {
+  color: #666;
+  padding: 2rem 0;
+}
+
+.empty {
+  color: #666;
+  font-size: 0.9rem;
+}

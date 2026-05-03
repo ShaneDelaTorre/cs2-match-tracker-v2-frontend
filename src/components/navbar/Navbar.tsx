@@ -11,7 +11,7 @@ export default function Navbar() {
   const { data: profile } = useOwnProfile();
   const pathname = usePathname();
 
-  const handleLogout = async ()  => {
+  const handleLogout = async () => {
     await logout();
   };
 
@@ -45,13 +45,16 @@ export default function Navbar() {
               >
                 Friends
               </Link>
+              <Link
+                href="/news"
+                className={`${styles.link} ${isActive("/news") ? styles.active : ""}`}
+              >
+                News
+              </Link>
             </div>
 
             <div className={styles.right}>
-              <Link
-                href="/profile/me"
-                className={styles.username}
-              >
+              <Link href="/profile/me" className={styles.username}>
                 {profile?.username ?? "..."}
               </Link>
               <button onClick={handleLogout} className={styles.logout}>

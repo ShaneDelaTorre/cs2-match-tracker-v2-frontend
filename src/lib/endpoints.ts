@@ -8,6 +8,7 @@ import {
   ChatHistory,
   TokenPair,
   PaginatedResponse,
+  NewsItem,
 } from "@/types";
 
 // Auth Endpoints - Login and Registration
@@ -81,3 +82,7 @@ export const getMaps = (): Promise<MapType[]> =>
 // Chats Endpoints
 export const getChatHistory = (recepientId: number): Promise<ChatHistory[]> =>
   api.get(`api/chat/${recepientId}`).then((r) => r.data);
+
+// News Endpoints
+export const getNewsItems = ():Promise<PaginatedResponse<NewsItem>> =>
+  api.get("api/news/").then((r) => r.data);

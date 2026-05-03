@@ -109,6 +109,16 @@ export interface ChatMessage {
   sent_at: string
 }
 
+export interface NewsItem {
+  id: number;
+  source_name: string;
+  title: string;
+  url: string;
+  summary: string;
+  published_at: string;
+  fetched_at: string;
+}
+
 export interface PaginatedResponse<T> {
   count: number;
   next: string | null;
