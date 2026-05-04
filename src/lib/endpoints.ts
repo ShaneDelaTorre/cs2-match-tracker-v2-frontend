@@ -39,7 +39,7 @@ export const getPublicProfile = (id: number): Promise<PublicProfile> =>
   api.get(`/api/accounts/users/${id}/`).then((r) => r.data);
 
 export const searchAccounts = (query: string): Promise<PaginatedResponse<PublicProfile>> =>
-  api.get(`api/accounts/users/username/?search${query}`).then((r) => r.data);
+  api.get(`api/accounts/users/username/?search=${query}`).then((r) => r.data);
 
 export const getFriends = (): Promise<PublicProfile[]> =>
   api.get("/api/accounts/friends/").then((r) => r.data.results);
